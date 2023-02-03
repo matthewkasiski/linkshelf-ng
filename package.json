@@ -1,6 +1,6 @@
 {
-  "name": "linkshelf",
-  "version": "0.0.2",
+  "name": "linkshelf-ng",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/main.js",
   "bin": {
@@ -13,7 +13,7 @@
     "build": "esbuild src/main.ts --platform=node --bundle --outdir=dist --format=cjs --external:fs-extra"
   },
   "keywords": [],
-  "author": "Jason Yu <me@ycmjason.com>",
+  "author": "Jason Yu <me@ycmjason.com>; Matthew Kasiski <matt@matthewkasiski.me>",
   "license": "ISC",
   "devDependencies": {
     "@types/fs-extra": "^9.0.11",
@@ -27,5 +27,5 @@
   "files": [
     "dist/main.js"
   ],
-  "repository": "github:ycmjason/linkshelf"
+  "repository": "github:matthewkasiski/linkshelf-ng"
 }

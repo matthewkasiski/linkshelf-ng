@@ -16,13 +16,13 @@
   "author": "Jason Yu <me@ycmjason.com>",
   "license": "ISC",
   "devDependencies": {
-    "@types/fs-extra": "^9.0.11",
+    "@types/fs-extra": "^11.0.1",
     "@types/node": "^14.14.41",
     "esbuild": "^0.11.11",
     "prettier": "^2.2.1"
   },
   "dependencies": {
-    "fs-extra": "^9.1.0"
+    "fs-extra": "^11.1.0"
   },
   "files": [
     "dist/main.js"

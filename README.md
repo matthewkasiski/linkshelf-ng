@@ -2,14 +2,15 @@
 
 A command-line tool to generate your own "linktree-like" website. Forked from linktree
 
+
 ## Goals
 1. Resolve any out of date dependencies via automation
-2. 80%+ code coverage tests to automate PRs (e.g. Dependabot)
-3. Add additional customization features
+2. Add additional customization features
    1. The ability to customize page background
    2. The ability to add icons to link text
    3. The ability to hotlink images or add statically (e.g. local or inline encoded)
    4. The ability to select font type
+3. 80%+ code coverage tests to automate PRs (e.g. Dependabot)
 
 
 ## Install

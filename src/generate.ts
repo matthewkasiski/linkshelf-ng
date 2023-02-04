@@ -1,6 +1,8 @@
 type Config = {
   profilePicture: string;
   name: string;
+  backgroundColorTopRGB: string;
+  backgroundColorBottomRGB: string;
   links: {
     title: string;
     url: string;
@@ -12,12 +14,12 @@ type FileData = {
   content: string;
 };
 
-export const generateLinkshelf = (config: Config): FileData[] => {
+export const generatelinkshelf = (config: Config): FileData[] => {
   return [
     {
       name: 'index.html',
       content: `
-      <html>
+      <html lang="en">
         <head>
           <title>${config.name}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +28,7 @@ export const generateLinkshelf = (config: Config): FileData[] => {
         <body>
           <div class="background">
             <div class="container">
-              <img class="profile-picture" src="${config.profilePicture}">
+              <img class="profile-picture" alt="Profile Picture" src="${config.profilePicture}">
               <div class="name">${config.name}</div>
               ${config.links
                 .map(({ title, url }) => {
@@ -54,7 +56,7 @@ export const generateLinkshelf = (config: Config): FileData[] => {
       }
 
       .background {
-        background: linear-gradient(0deg, rgb(255, 184, 198), rgb(104, 79, 246));
+        background: linear-gradient(0deg, rgb(${config.backgroundColorTopRGB}), rgb(${config.backgroundColorBottomRGB}));
         min-width: 100vw;
         min-height: 100vh;
       }

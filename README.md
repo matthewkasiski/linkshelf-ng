@@ -8,7 +8,8 @@ A command-line tool to generate your own "linktree-like" website. Forked from li
 3. Add additional customization features
    1. The ability to customize page background
    2. The ability to add icons to link text
-   3. The ability to hotlink images or add staticly (e.g. local or inline encoded)
+   3. The ability to hotlink images or add statically (e.g. local or inline encoded)
+   4. The ability to select font type
 
 
 ## Install

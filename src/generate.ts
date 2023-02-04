@@ -14,7 +14,7 @@ type FileData = {
   content: string;
 };
 
-export const generatelinkshelf = (config: Config): FileData[] => {
+export const generateLinkshelf = (config: Config): FileData[] => {
   return [
     {
       name: 'index.html',

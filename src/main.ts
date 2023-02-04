@@ -6,7 +6,7 @@ import { generateLinkshelf } from './generate';
 const [configPath, outputDirectory] = process.argv.slice(2);
 
 if (!configPath || !outputDirectory) {
-  console.error('Usage: linkshelf [config] [outDir]');
+  console.error('Usage: linkshelf-ng [config] [outDir]');
   process.exit(1);
 }
 

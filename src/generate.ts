@@ -1,12 +1,16 @@
 type Config = {
-  profilePicture: string;
-  name: string;
-  backgroundColorTopRGB: string;
-  backgroundColorBottomRGB: string;
-  links: {
-    title: string;
-    url: string;
-  }[];
+  page: {
+    backgroundColorTopRGB: string; //TODO: Add Integer children with ranges
+    backgroundColorBottomRGB: string;
+  }
+  profile: {
+    picture: string;
+    name: string;
+    links: {
+      title: string;
+      url: string;
+    }[];
+  }
 };
 
 type FileData = {
@@ -21,16 +25,16 @@ export const generateLinkshelf = (config: Config): FileData[] => {
       content: `
       <html lang="en">
         <head>
-          <title>${config.name}</title>
+          <title>${config.profile.name}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="stylesheet" href="./main.css">
         </head>
         <body>
           <div class="background">
             <div class="container">
-              <img class="profile-picture" alt="Profile Picture" src="${config.profilePicture}">
-              <div class="name">${config.name}</div>
-              ${config.links
+              <img class="profile-picture" alt="Profile Picture" src="${config.profile.picture}">
+              <div class="name">${config.profile.name}</div>
+              ${config.profile.links
                 .map(({ title, url }) => {
                   return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="link">${title}</a>`;
                 })
@@ -56,7 +60,7 @@ export const generateLinkshelf = (config: Config): FileData[] => {
       }
 
       .background {
-        background: linear-gradient(0deg, rgb(${config.backgroundColorTopRGB}), rgb(${config.backgroundColorBottomRGB}));
+        background: linear-gradient(0deg, rgb(${config.page.backgroundColorTopRGB}), rgb(${config.page.backgroundColorBottomRGB}));
         min-width: 100vw;
         min-height: 100vh;
       }

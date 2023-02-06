@@ -10,7 +10,8 @@ A command-line tool to generate your own "linktree-like" website. Forked from li
    2. The ability to add icons to link text
    3. The ability to hotlink images or add statically (e.g. local or inline encoded)
    4. The ability to select font type
-3. 80%+ code coverage tests to automate PRs (e.g. Dependabot)
+3. Implement linting
+4. 80%+ code coverage tests to automate PRs (e.g. Dependabot)
 
 
 ## Install

@@ -1,22 +1,22 @@
 type Config = {
   page: {
-    backgroundColorTopRGB: string; //TODO: Add Integer children with ranges
-    backgroundColorBottomRGB: string;
+    backgroundColorTopRGB: string // TODO: Add Integer children with ranges
+    backgroundColorBottomRGB: string
   }
   profile: {
-    picture: string;
-    name: string;
+    picture: string
+    name: string
     links: {
-      title: string;
-      url: string;
-    }[];
+      title: string
+      url: string
+    }[]
   }
-};
+}
 
 type FileData = {
-  name: string;
-  content: string;
-};
+  name: string
+  content: string
+}
 
 export const generateLinkshelf = (config: Config): FileData[] => {
   return [
@@ -36,13 +36,13 @@ export const generateLinkshelf = (config: Config): FileData[] => {
               <div class="name">${config.profile.name}</div>
               ${config.profile.links
                 .map(({ title, url }) => {
-                  return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="link">${title}</a>`;
+                  return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="link">${title}</a>`
                 })
                 .join('')}
             </div>
           </div>
         </body>
-    </html>`,
+    </html>`
     },
     {
       name: 'main.css',
@@ -104,7 +104,7 @@ export const generateLinkshelf = (config: Config): FileData[] => {
         background: white;
         color: rgb(105, 79, 246);
       }
-      `,
-    },
-  ];
-};
+      `
+    }
+  ]
+}

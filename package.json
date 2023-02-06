@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "/bin/rm -rf dist",
     "preversion": "npm run clean && npm run build",
-    "build": "esbuild src/main.ts --platform=node --bundle --outdir=dist --format=cjs --external:fs-extra"
+    "build": "esbuild src/main.ts --platform=node --bundle --outdir=dist --format=cjs --external:fs-extra",
+    "lint": "eslint --ext .ts ."
   },
   "keywords": [],
   "author": "Jason Yu <me@ycmjason.com>; Matthew Kasiski <matt@matthewkasiski.me>",
@@ -18,8 +19,15 @@
   "devDependencies": {
     "@types/fs-extra": "^9.0.11",
     "@types/node": "^14.14.41",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
     "esbuild": "^0.11.11",
-    "prettier": "^2.2.1"
+    "eslint": "^8.33.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^2.2.1",
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "fs-extra": "^9.1.0"

@@ -102,7 +102,7 @@ export const generateLinkshelf = (config: Config): FileData[] => {
 
       .link:hover {
         background: white;
-        color: rgb(105, 79, 246);
+        color: rgb(${config.page.backgroundColorBottomRGB});
       }
       `
     }
